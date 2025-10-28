@@ -5,5 +5,13 @@ jobs:
   build:
     runs-on: self-hosted   # 👈 Runs on a GitHub-hosted Linux VM
     steps:
-      - name: Run build
-        run: npm install && npm run build
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2   # ✅ 官方 Bun 安装 action
+        with:
+          bun-version: latest        # 或者指定版本: 1.1.30
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build
+        run: bun run build
