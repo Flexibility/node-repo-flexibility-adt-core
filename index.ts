@@ -1,1 +1,1 @@
-console.log("Hello via Bun2!");
+console.log("Hello via Bun!");
