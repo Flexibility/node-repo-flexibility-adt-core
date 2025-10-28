@@ -5,6 +5,5 @@ jobs:
   build:
     runs-on: self-hosted   # 👈 Runs on a GitHub-hosted Linux VM
     steps:
-      - uses: actions/checkout@v4
       - name: Run build
         run: npm install && npm run build
